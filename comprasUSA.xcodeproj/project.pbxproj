@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		090061B5251977C80085F23B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090061B4251977C80085F23B /* AppDelegate.swift */; };
-		090061B7251977C80085F23B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090061B6251977C80085F23B /* ViewController.swift */; };
+		090061B7251977C80085F23B /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090061B6251977C80085F23B /* ShoppingViewController.swift */; };
 		090061BA251977C80085F23B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090061B8251977C80085F23B /* Main.storyboard */; };
 		090061BC251977C90085F23B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090061BB251977C90085F23B /* Assets.xcassets */; };
 		090061BF251977C90085F23B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090061BD251977C90085F23B /* LaunchScreen.storyboard */; };
+		090061C9251983CF0085F23B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090061C8251983CF0085F23B /* SettingViewController.swift */; };
+		090061CB251983E70085F23B /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090061CA251983E70085F23B /* TaxesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		090061B1251977C80085F23B /* comprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090061B4251977C80085F23B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		090061B6251977C80085F23B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		090061B6251977C80085F23B /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		090061B9251977C80085F23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		090061BB251977C90085F23B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		090061BE251977C90085F23B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		090061C0251977C90085F23B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		090061C8251983CF0085F23B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
+		090061CA251983E70085F23B /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				090061B4251977C80085F23B /* AppDelegate.swift */,
-				090061B6251977C80085F23B /* ViewController.swift */,
+				090061B6251977C80085F23B /* ShoppingViewController.swift */,
+				090061CA251983E70085F23B /* TaxesViewController.swift */,
 				090061B8251977C80085F23B /* Main.storyboard */,
+				090061C8251983CF0085F23B /* SettingViewController.swift */,
 				090061BB251977C90085F23B /* Assets.xcassets */,
 				090061BD251977C90085F23B /* LaunchScreen.storyboard */,
 				090061C0251977C90085F23B /* Info.plist */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				090061B7251977C80085F23B /* ViewController.swift in Sources */,
+				090061CB251983E70085F23B /* TaxesViewController.swift in Sources */,
+				090061B7251977C80085F23B /* ShoppingViewController.swift in Sources */,
 				090061B5251977C80085F23B /* AppDelegate.swift in Sources */,
+				090061C9251983CF0085F23B /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
