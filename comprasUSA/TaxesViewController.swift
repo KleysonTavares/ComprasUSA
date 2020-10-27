@@ -10,21 +10,32 @@ import UIKit
 
 class TaxesViewController: UIViewController {
 
+    @IBOutlet weak var lbDolar: UILabel!
+    @IBOutlet weak var lbDescriptionTax: UILabel!
+    @IBOutlet weak var lbDescriptionIOF: UILabel!
+    @IBOutlet weak var lbStatesTax: UILabel!
+    @IBOutlet weak var lbIOF: UILabel!
+    @IBOutlet weak var swCreditCard: UISwitch!
+    @IBOutlet weak var lbReal: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func calculateTaxes () {
+        lbDescriptionTax.text = "Imposto do estado(\(tc.getFormattedValue(of: tc.stateTax, withCurrency: ""))%) "
+            lbIOF.text = "IOF (\(tc.getFormattedValue(of: tc.iof, withCurrency: ""))%) "
+        lbDolar.text = tc.getFormattedValue(of: tc.shoppingValue, withCurrency: "US$ ")
+        lbStatesTax.text = tc.getFormattedValue(of: tc.stateTaxValue, withCurrency: "US$ ")
+        lbIOF.text = tc.getFormattedValue(of: tc.iofValue, withCurrency: "US$ ")
+        let real = tc.calculate(usingCreditCard: swCreditCard.isOn)
+        lbReal.text = tc.getFormattedValue(of: real, withCurrency: "R$ ")
     }
-    */
 
+    @IBAction func changeIOF(_ sender: UISwitch) {
+        calculateTaxes()
+    }
+    
 }

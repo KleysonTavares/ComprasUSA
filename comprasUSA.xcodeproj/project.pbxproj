@@ -14,6 +14,8 @@
 		090061BF251977C90085F23B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090061BD251977C90085F23B /* LaunchScreen.storyboard */; };
 		090061C9251983CF0085F23B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090061C8251983CF0085F23B /* SettingViewController.swift */; };
 		090061CB251983E70085F23B /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090061CA251983E70085F23B /* TaxesViewController.swift */; };
+		0992272325425788007D394F /* TaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992272225425788007D394F /* TaxesCalculator.swift */; };
+		0992272525425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992272425425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		090061C0251977C90085F23B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		090061C8251983CF0085F23B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
 		090061CA251983E70085F23B /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
+		0992272225425788007D394F /* TaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesCalculator.swift; sourceTree = "<group>"; };
+		0992272425425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewcontrollerTaxesCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		090061B3251977C80085F23B /* comprasUSA */ = {
 			isa = PBXGroup;
 			children = (
-				090061B4251977C80085F23B /* AppDelegate.swift */,
-				090061B6251977C80085F23B /* ShoppingViewController.swift */,
-				090061CA251983E70085F23B /* TaxesViewController.swift */,
-				090061B8251977C80085F23B /* Main.storyboard */,
-				090061C8251983CF0085F23B /* SettingViewController.swift */,
-				090061BB251977C90085F23B /* Assets.xcassets */,
-				090061BD251977C90085F23B /* LaunchScreen.storyboard */,
-				090061C0251977C90085F23B /* Info.plist */,
+				096A845E2547AACF007F0E07 /* View */,
+				096A845C2547AAB9007F0E07 /* Control */,
+				096A845D2547AAC7007F0E07 /* Model */,
+				096A845F2547AB09007F0E07 /* Others */,
 			);
 			path = comprasUSA;
+			sourceTree = "<group>";
+		};
+		096A845C2547AAB9007F0E07 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				0992272425425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift */,
+				090061B6251977C80085F23B /* ShoppingViewController.swift */,
+				090061C8251983CF0085F23B /* SettingViewController.swift */,
+				090061CA251983E70085F23B /* TaxesViewController.swift */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+		096A845D2547AAC7007F0E07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0992272225425788007D394F /* TaxesCalculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		096A845E2547AACF007F0E07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				090061B8251977C80085F23B /* Main.storyboard */,
+				090061BD251977C90085F23B /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		096A845F2547AB09007F0E07 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				090061BB251977C90085F23B /* Assets.xcassets */,
+				090061C0251977C90085F23B /* Info.plist */,
+				090061B4251977C80085F23B /* AppDelegate.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +181,9 @@
 			files = (
 				090061CB251983E70085F23B /* TaxesViewController.swift in Sources */,
 				090061B7251977C80085F23B /* ShoppingViewController.swift in Sources */,
+				0992272325425788007D394F /* TaxesCalculator.swift in Sources */,
 				090061B5251977C80085F23B /* AppDelegate.swift in Sources */,
+				0992272525425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift in Sources */,
 				090061C9251983CF0085F23B /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
