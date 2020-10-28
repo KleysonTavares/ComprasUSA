@@ -15,7 +15,7 @@ final class ShoppingViewController: UIViewController {
     @IBOutlet weak var lbReal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMoney()
+        getMoney(typeMoney: .dolar)
         tabBarItem.image = UIImage(named: "bag")
     }
     
@@ -38,9 +38,14 @@ final class ShoppingViewController: UIViewController {
         lbRealDescription.text = "valor sem impostos (dólar\(dolar))"
     }
     
-    private func getMoney () {
-        API.fetchMoney(typeMoney: "USD-BRL") { (model) in
-            self.tc.dolar = self.tc.convertToDouble(model.USD?.ask ?? "0")
+    private func getMoney(typeMoney: MoneyTypes) {
+        API.fetchMoney(typeMoney: typeMoney) { (model) in
+            switch typeMoney {
+            case .dolar:
+                self.tc.dolar = self.tc.convertToDouble(model.USD?.ask ?? "0")
+            case .euro:
+                self.tc.dolar = self.tc.convertToDouble(model.EUR?.ask ?? "0")
+            }
         }
     }
 }

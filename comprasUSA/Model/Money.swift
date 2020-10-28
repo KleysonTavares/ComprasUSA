@@ -9,9 +9,24 @@
 import Foundation
 struct Money: Codable {
     let USD : USD?
+    let EUR : EUR?
 }
 
 struct USD: Codable {
+    let code : String?
+    let codein : String?
+    let name : String?
+    let high : String?
+    let low : String
+    let varBid : String?
+    let pctChang : String?
+    let bid : String?
+    let ask : String?
+    let timestamp : String?
+    let create_date : String?
+}
+
+struct EUR: Codable {
     let code : String?
     let codein : String?
     let name : String?

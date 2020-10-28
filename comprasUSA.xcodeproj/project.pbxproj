@@ -19,6 +19,7 @@
 		0992272325425788007D394F /* TaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992272225425788007D394F /* TaxesCalculator.swift */; };
 		0992272525425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992272425425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift */; };
 		09B6C06E2547C3AF00C23379 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6C06D2547C3AF00C23379 /* Money.swift */; };
+		09D9E4BF2549288D000EE70E /* MoneyTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D9E4BE2549288D000EE70E /* MoneyTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0992272225425788007D394F /* TaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesCalculator.swift; sourceTree = "<group>"; };
 		0992272425425C0F007D394F /* UIViewcontrollerTaxesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewcontrollerTaxesCalculator.swift; sourceTree = "<group>"; };
 		09B6C06D2547C3AF00C23379 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		09D9E4BE2549288D000EE70E /* MoneyTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				096A84652547BB60007F0E07 /* Endpoints.swift */,
+				09D9E4BE2549288D000EE70E /* MoneyTypes.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				090061CB251983E70085F23B /* TaxesViewController.swift in Sources */,
 				090061B7251977C80085F23B /* ShoppingViewController.swift in Sources */,
+				09D9E4BF2549288D000EE70E /* MoneyTypes.swift in Sources */,
 				0992272325425788007D394F /* TaxesCalculator.swift in Sources */,
 				09B6C06E2547C3AF00C23379 /* Money.swift in Sources */,
 				090061B5251977C80085F23B /* AppDelegate.swift in Sources */,

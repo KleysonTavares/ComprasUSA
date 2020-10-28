@@ -9,8 +9,8 @@
 import Foundation
 final class API {
     //funçao assincrona, pois o servidor pode demorar para retornar os dados e essa espera é assincrona utilizando o @escaping.
-    static func fetchMoney(typeMoney: String, completion: @escaping((Money) -> Void) ) {
-        let url = URL(string: Endpoints.baseUrl + typeMoney)!
+    static func fetchMoney(typeMoney: MoneyTypes, completion: @escaping((Money) -> Void) ) {
+        let url = URL(string: Endpoints.baseUrl + typeMoney.rawValue)!
         let dataTask = URLSession.shared.dataTask(with: url) { (data, _ , error) in
             if error == nil { // deu certo, sem erro
                 let model = try! JSONDecoder().decode(Money.self, from: data!)
