@@ -9,5 +9,5 @@
 import Foundation
 
 struct Endpoints {
-    let baseUrl = "https://economia.awesomeapi.com.br/all/"
+    static let baseUrl = "https://economia.awesomeapi.com.br/all/" //singleton
 }

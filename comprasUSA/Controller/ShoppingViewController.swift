@@ -15,9 +15,7 @@ class ShoppingViewController: UIViewController {
     @IBOutlet weak var lbReal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        API().fetchMoney(typeMoney: "USD-BRL") { (model) in
-            print(model)
-        }
+        getMoney()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,5 +36,10 @@ class ShoppingViewController: UIViewController {
         let dolar = tc.getFormattedValue(of: tc.dolar, withCurrency: "" )
         lbRealDescription.text = "valor sem impostos (dólar\(dolar))"
     }
+    
+    private func getMoney () {
+        API().fetchMoney(typeMoney: "USD-BRL") { (model) in
+            self.tc.dolar = self.tc.convertToDouble(model.USD?.ask ?? "0")
+        }
+    }
 }
-

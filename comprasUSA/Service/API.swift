@@ -8,23 +8,20 @@
 
 import Foundation
 final class API {
+    //funçao assincrona, pois o servidor pode demorar para retornar os dados e essa espera é assincrona utilizando o @escaping.
     func fetchMoney(typeMoney: String, completion: @escaping((Money) -> Void) ) {
-        let url = URL(string: "https://economia.awesomeapi.com.br/all/USD-BRL")
-        let session = URLSession.shared
-        var request = URLRequest (url: url!)
-        request.addValue ("application/json", forHTTPHeaderField: "Accept")
-        session.dataTask(with: url!) { (dataResponse, response, error)
-            in
-            print(response)
-            if error == nil {
-                if let data = dataResponse {
-                    if let model = try? JSONDecoder().decode(Money.self, from: data) {
+        let url = URL(string: Endpoints.baseUrl + typeMoney)!
+        let dataTask = URLSession.shared.dataTask(with: url) { (data, _ , error) in
+            if error == nil { // deu certo, sem erro
+                let model = try! JSONDecoder().decode(Money.self, from: data!)
+                DispatchQueue.main.async {//voltar pra thread principal
                     completion(model)
-                    }
-                    
                 }
             }
-            
-        }.resume()
+            else { // imprime o erro
+                print(error!)
+            }
+        }
+        dataTask.resume() // da o play na dataTask
     }
 }

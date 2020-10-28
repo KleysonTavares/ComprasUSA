@@ -16,7 +16,7 @@ struct USD: Codable {
     let codein : String?
     let name : String?
     let high : String?
-    let low : String?
+    let low : String
     let varBid : String?
     let pctChang : String?
     let bid : String?
