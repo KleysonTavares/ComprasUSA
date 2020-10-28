@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaxesViewController: UIViewController {
+final class TaxesViewController: UIViewController {
 
     @IBOutlet weak var lbDolar: UILabel!
     @IBOutlet weak var lbDescriptionTax: UILabel!
@@ -18,12 +18,11 @@ class TaxesViewController: UIViewController {
     @IBOutlet weak var swCreditCard: UISwitch!
     @IBOutlet weak var lbReal: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tabBarItem.image = UIImage(named: "taxes")
     }
+    
     func calculateTaxes () {
         lbDescriptionTax.text = "Imposto do estado(\(tc.getFormattedValue(of: tc.stateTax, withCurrency: ""))%) "
             lbIOF.text = "IOF (\(tc.getFormattedValue(of: tc.iof, withCurrency: ""))%) "
@@ -37,5 +36,4 @@ class TaxesViewController: UIViewController {
     @IBAction func changeIOF(_ sender: UISwitch) {
         calculateTaxes()
     }
-    
 }

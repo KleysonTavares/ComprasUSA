@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoppingViewController: UIViewController {
+final class ShoppingViewController: UIViewController {
     
     @IBOutlet weak var tfDolar: UITextField!
     @IBOutlet weak var lbRealDescription: UILabel!
@@ -16,6 +16,7 @@ class ShoppingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getMoney()
+        tabBarItem.image = UIImage(named: "bag")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,7 +29,7 @@ class ShoppingViewController: UIViewController {
         setAmmount()
     }
     
-    func setAmmount() {
+    private func setAmmount() {
         let value = tfDolar.text!.isEmpty ? "0" : tfDolar.text!
         tc.shoppingValue = tc.convertToDouble(value)
         
@@ -38,7 +39,7 @@ class ShoppingViewController: UIViewController {
     }
     
     private func getMoney () {
-        API().fetchMoney(typeMoney: "USD-BRL") { (model) in
+        API.fetchMoney(typeMoney: "USD-BRL") { (model) in
             self.tc.dolar = self.tc.convertToDouble(model.USD?.ask ?? "0")
         }
     }

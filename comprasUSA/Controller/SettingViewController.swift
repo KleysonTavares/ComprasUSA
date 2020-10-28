@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
-    @IBOutlet weak var tfDolar: UITextField!
+final class SettingViewController: UIViewController {
     
+    @IBOutlet weak var tfDolar: UITextField!
     @IBOutlet weak var tfIOF: UITextField!
     @IBOutlet weak var tfStatesTaxes: UITextField!
     
@@ -19,6 +19,7 @@ class SettingViewController: UIViewController {
         tfDolar.text = tc.getFormattedValue(of: tc.dolar, withCurrency: "")
         tfIOF.text = tc.getFormattedValue(of: tc.iof, withCurrency: "")
         tfStatesTaxes.text = tc.getFormattedValue(of: tc.stateTax, withCurrency: "")
+        tabBarItem.image = UIImage(named: "settings")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -32,11 +33,9 @@ class SettingViewController: UIViewController {
     }
 }
 
-
 //estender para aplicar protoclo do uiviewcontroller
 extension SettingViewController : UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) { //sempre que sair de uma textfield
         setValues()
     }
-    
 }
